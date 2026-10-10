@@ -13,7 +13,15 @@ def database(url):
     sqlite = parsed.get_backend_name() == 'sqlite'
     if sqlite and parsed.database and parsed.database != ':memory:':
         Path(parsed.database).parent.mkdir(parents=True, exist_ok=True)
-    engine = create_engine(url, connect_args={'check_same_thread': False, 'timeout': 30} if sqlite else {}, pool_pre_ping=True)
+    options = {'pool_pre_ping': True}
+    if sqlite:
+        options['connect_args'] = {'check_same_thread': False, 'timeout': 30}
+    elif parsed.get_backend_name() == 'postgresql':
+        # Small pool for the portfolio; disable automatic prepared statements
+        # for compatibility with transaction-pooling connection URLs.
+        options.update(connect_args={'connect_timeout': 10, 'prepare_threshold': None},
+                       pool_size=2, max_overflow=3, pool_timeout=15, pool_recycle=300)
+    engine = create_engine(url, **options)
     if sqlite:
         @event.listens_for(engine, 'connect')
         def pragmas(connection, _):

@@ -10,7 +10,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.12.14
       - key: DATABASE_URL
-        value: sqlite:///./data/portfolio.db
+        sync: false
       - key: ADMIN_TOKEN
         generateValue: true
       - key: IP_HASH_SALT

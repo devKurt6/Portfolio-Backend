@@ -1,5 +1,7 @@
 # Portfolio API
 
+For persistent notes using Neon PostgreSQL Free, follow [NEON_SETUP.md](NEON_SETUP.md). Render's DATABASE_URL is now supplied privately in the dashboard/Blueprint prompt; local development still defaults to SQLite.
+
 Upload **the contents of this folder** into your backend GitHub repository. `render.yaml`, `requirements.lock`, `start.py`, and this README must be at the repository root. The backend is self-contained; it does not read files from the separate frontend repository.
 
 Windows PowerShell, from this folder:
