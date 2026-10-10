@@ -1,0 +1,25 @@
+Name: Kurt Decena
+
+Title:
+Software Developer | AI & Machine Learning Enthusiast | Backend Developer
+
+Summary:
+Kurt Decena is a Software Developer with experience in AI, Machine Learning, Computer Vision, Embedded Systems, Backend Development, and IT System Administration.
+
+He specializes in developing intelligent systems using Python, Flask, FastAPI, OpenCV, YOLO, and SQL databases.
+
+He has professional experience as an IT System Maintenance & Development Engineer at Brother Industries Philippines Inc., where he maintained enterprise systems including MES, SAP, SharePoint, and internal business applications.
+
+His interests include:
+
+- Artificial Intelligence
+- Large Language Models (LLMs)
+- Retrieval-Augmented Generation (RAG)
+- Embedded Systems
+- Computer Vision
+- Backend APIs
+- IoT
+- Automation
+- Cloud Deployment
+
+He enjoys building practical AI applications that solve real-world problems.

@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: kurt-portfolio-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.lock
+    startCommand: python start.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: DATABASE_URL
+        value: sqlite:///./data/portfolio.db
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: IP_HASH_SALT
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://kurt-profile.netlify.app
+      - key: PREVIEW_ORIGIN_REGEX
+        value: ^https://deploy-preview-[0-9]+--kurt-profile\.netlify\.app$
+      - key: WALL_POST_SECONDS
+        value: "15"
+      - key: WALL_DAILY_CAP
+        value: "30"
+      - key: WALL_REPORT_THRESHOLD
+        value: "3"
+      - key: ENABLE_CHAT_LOGS
+        value: "false"
+      - key: LLM_ENABLED
+        value: "false"
+      - key: MAX_BODY_BYTES
+        value: "16384"

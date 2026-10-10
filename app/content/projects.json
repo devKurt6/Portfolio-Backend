@@ -1,0 +1,165 @@
+[
+  {
+    "slug": "embedded-plate-recognition",
+    "title": "Embedded System Plate Number Recognition",
+    "description": "Advanced computer vision system utilizing YOLO for real-time object detection, deployed on embedded hardware for efficient license plate recognition.",
+    "longDescription": "Real-time license plate recognition system using YOLO, OCR, OpenCV, and Python deployed on embedded hardware.",
+    "image": "/images/SystemDevice.png",
+    "category": "AI & vision",
+    "tags": [
+      "YOLO",
+      "Python",
+      "Embedded Systems"
+    ],
+    "video": "AqmeAzkVSvQ",
+    "demo": "",
+    "github": "",
+    "featured": true,
+    "highlights": [
+      "YOLO",
+      "Python",
+      "OCR",
+      "OpenCV",
+      "Flask"
+    ]
+  },
+  {
+    "slug": "plate-number-recognition",
+    "title": "Plate Number Recognition",
+    "description": "Web-based license plate recognition system with Flask backend and real-time processing capabilities.",
+    "longDescription": "Flask-based web application capable of detecting and recognizing vehicle license plates in real time.",
+    "image": "/images/platenumberrecognition.png",
+    "category": "AI & vision",
+    "tags": [
+      "YOLO",
+      "Flask",
+      "OpenCV"
+    ],
+    "video": "xHOkf1lmXvY",
+    "demo": "",
+    "github": "",
+    "featured": false,
+    "highlights": [
+      "Flask",
+      "Python",
+      "YOLO",
+      "OpenCV"
+    ]
+  },
+  {
+    "slug": "gun-detection",
+    "title": "Gun Detection System",
+    "description": "Security-focused computer vision application for real-time weapon detection and alert systems.",
+    "longDescription": "AI-powered computer vision system that detects firearms using YOLO and provides real-time monitoring.",
+    "image": "/images/gundetection.png",
+    "category": "AI & vision",
+    "tags": [
+      "YOLO",
+      "Flask",
+      "Computer Vision"
+    ],
+    "video": "_nqwbiKRMwU",
+    "demo": "",
+    "github": "",
+    "featured": false,
+    "highlights": [
+      "YOLO",
+      "Flask",
+      "Python",
+      "OpenCV"
+    ]
+  },
+  {
+    "slug": "smart-helmet",
+    "title": "IoT Smart Helmet for Riders",
+    "description": "A smart safety system designed to track riders in real time, enabling location monitoring, data logging, and improved emergency response through a connected web dashboard.",
+    "longDescription": "IoT-based rider safety system using ESP32 with GPS tracking, GPRS communication, and FastAPI backend.",
+    "image": "/images/SmartHelmet.png",
+    "category": "Embedded & IoT",
+    "tags": [
+      "ESP32",
+      "FastAPI",
+      "GPRS"
+    ],
+    "video": "",
+    "demo": "https://smart-helmet-rider.onrender.com/",
+    "github": "",
+    "featured": true,
+    "highlights": [
+      "ESP32",
+      "FastAPI",
+      "Python",
+      "GPS",
+      "IoT"
+    ]
+  },
+  {
+    "slug": "uniform-attendance",
+    "title": "Uniform Detection with Fingerprint Attendance System",
+    "description": "An automated attendance system that ensures compliance and accuracy by verifying uniforms using AI vision and authenticating users through fingerprint scanning.",
+    "longDescription": "Attendance monitoring system using AI-based uniform detection and fingerprint authentication.",
+    "image": "/images/UniformDetection.png",
+    "category": "AI & vision",
+    "tags": [
+      "YOLO",
+      "Flask",
+      "Computer Vision",
+      "Raspberry Pi"
+    ],
+    "video": "eEf8GQ1JfP0",
+    "demo": "",
+    "github": "",
+    "featured": false,
+    "highlights": [
+      "YOLO",
+      "Flask",
+      "Raspberry Pi",
+      "Python"
+    ]
+  },
+  {
+    "slug": "wedding-invitation",
+    "title": "Wedding Invitation Website",
+    "description": "My responsive wedding website features event information, RSVP functionality, a photo gallery, a countdown timer, venue location, and a modern user interface to provide guests with a seamless and memorable experience.",
+    "longDescription": "Responsive wedding invitation website with RSVP, countdown timer, gallery, and venue map.",
+    "image": "/images/wedding.jpg",
+    "category": "Web development",
+    "tags": [
+      "HTML 28.3%",
+      "CSS 42.8%",
+      "JavaScript 28.9%"
+    ],
+    "video": "",
+    "demo": "https://kurtandpaola.netlify.app/",
+    "github": "",
+    "featured": true,
+    "highlights": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  },
+  {
+    "slug": "tissue-defect-detection",
+    "title": "Tissue Package Defect Detection",
+    "description": "This project is Python GUI BASED with image processing using tensorflowlite or yolov5 to capture NG packaged and saved in SQLITE database.",
+    "longDescription": "This project is Python GUI BASED with image processing using tensorflowlite or yolov5 to capture NG packaged and saved in SQLITE database.",
+    "image": "/images/NG Tissue Packaged Detection.png",
+    "category": "AI & vision",
+    "tags": [
+      "Python 98.5%",
+      "C++ 1.5%",
+      "Arduino Uno",
+      "CPU-base"
+    ],
+    "video": "poXTc46FULI",
+    "demo": "",
+    "github": "",
+    "featured": false,
+    "highlights": [
+      "Python GUI",
+      "Image processing",
+      "SQLite database"
+    ]
+  }
+]
