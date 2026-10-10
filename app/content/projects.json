@@ -161,5 +161,29 @@
       "Image processing",
       "SQLite database"
     ]
+  },
+{
+    "slug": "twdasd",
+    "title": "Tadsawdetection",
+    "description": "This project is Python GUI BASED with image processing using tensorflowlite or yolov5 to capture NG packaged and saved in SQLITE database.",
+    "longDescription": "This project is Python GUI BASED with image processing using tensorflowlite or yolov5 to capture NG packaged and saved in SQLITE database.",
+    "image": "/images/NG Tissue Packaged Detection.png",
+    "category": "AI & vision",
+    "tags": [
+      "Python 98.5%",
+      "C++ 1.5%",
+      "Arduino Uno",
+      "CPU-base"
+    ],
+    "video": "poXTc46FULI",
+    "demo": "",
+    "github": "",
+    "featured": false,
+    "highlights": [
+      "Python GUI",
+      "Image processing",
+      "SQLite database"
+    ]
   }
+
 ]
