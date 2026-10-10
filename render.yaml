@@ -16,9 +16,9 @@ services:
       - key: IP_HASH_SALT
         generateValue: true
       - key: ALLOWED_ORIGINS
-        value: https://kurt-profile.netlify.app
+        value: https://devkurt.netlify.app
       - key: PREVIEW_ORIGIN_REGEX
-        value: ^https://deploy-preview-[0-9]+--kurt-profile\.netlify\.app$
+        value: ^https://deploy-preview-[0-9]+--devkurt\.netlify\.app$
       - key: WALL_POST_SECONDS
         value: "15"
       - key: WALL_DAILY_CAP
