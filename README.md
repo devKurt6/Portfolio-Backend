@@ -20,7 +20,7 @@ python3.12 -m venv .venv
 .venv/bin/python start.py
 ```
 
-`setup_local.py` creates ignored random local secrets without overwriting existing configuration. **`python start.py`** performs migrations, seeds real projects if empty, and serves port 8000 (or `PORT`). Project seed snapshots in `app/content/` originate from the frontend's real content; update these copies separately when changing content. Seed never overwrites existing project rows or adds sample wall messages.
+`setup_local.py` creates ignored random local secrets without overwriting existing configuration. **`python start.py`** performs migrations, synchronizes projects by slug, and serves port 8000 (or `PORT`). Project seed snapshots in `app/content/` originate from the frontend's real content; update these copies separately when changing content. Each startup adds new slugs and updates listed project fields for existing slugs. Existing IDs, publication status, year, unlisted projects, and all wall/contact records are preserved. No sample wall messages are added.
 
 ## Render Git deployment
 
@@ -82,3 +82,15 @@ Keep the IP salt stable; rotating it changes ownership/report hashes and resets 
 5. Update Render's private URL, deploy one worker, verify health/admin/wall, then resume writes. For multiple workers/instances, add shared limiter storage and verify quota transactions first.
 
 The frozen initial Alembic migration uses portable types and explicit tables. For future schema changes, add new migration revisions; do not edit the already-deployed initial revision. SQLite free-tier data loss and paid disk options are described in the root README.
+
+
+## Add or update a project
+
+1. Add a project object to `app/content/projects.json`, inside the array. Use a unique lowercase slug such as `face-recognition`. Keep the same slug to update the same project; changing the slug creates a separate record.
+2. Push the updated JSON **and the new seed.py implementation** to your backend repository. Render must successfully redeploy/start using `python start.py`; startup now imports additions and updates automatically. A push alone does not change a currently running process if auto-deploy is disabled.
+3. Add the matching project to the separate frontend repository's `data/projects.json`, including its image, and deploy Netlify to generate the detail page. Keep the slug/title/details consistent.
+4. Check `/api/projects/your-slug`, then open the frontend project page.
+
+For an immediate local database sync from this folder: `python seed.py` (with your configured interpreter). It prints counts like `{'added': 1, 'updated': 0}`. Existing database data is not cleared. Missing projects are not deleted; removing a JSON object does not unpublish a previously imported project. Set publication status in the database deliberately if needed.
+
+Invalid source data or duplicate slugs fail before database changes are committed. JSON is authoritative for the listed project's content fields on subsequent startup; direct database edits to those fields are overwritten by the JSON. Publication status and year remain database-managed. Render free-tier storage loss is still a platform limitation, independent of this sync change.

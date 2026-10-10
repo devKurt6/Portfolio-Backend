@@ -1,4 +1,5 @@
 from pathlib import Path
+import json
 from alembic import command
 from alembic.config import Config
 from sqlalchemy import inspect, select, func
@@ -17,7 +18,8 @@ def test_real_migration_and_seed_idempotent(tmp_path, monkeypatch):
     engine,sessions=database(url)
     seed(sessions);seed(sessions)
     with sessions() as db:
-        assert db.scalar(select(func.count()).select_from(Project))==7
+        source=json.loads(Path(__file__).parents[1].joinpath('app/content/projects.json').read_text(encoding='utf-8'))
+        assert db.scalar(select(func.count()).select_from(Project))==len(source)
         assert db.scalar(select(func.count()).select_from(WallMessage))==0
         assert db.get(WallPostGate,1) is not None
     assert 'alembic_version' in inspect(engine).get_table_names()

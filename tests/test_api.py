@@ -1,4 +1,6 @@
 from uuid import uuid4
+import json
+from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from fastapi.testclient import TestClient
 from sqlalchemy import select, func
@@ -10,7 +12,8 @@ def post(client, **kwargs):
 
 def test_projects(client):
     rows = client.get('/api/projects').json()
-    assert len(rows) == 7
+    source=json.loads(Path(__file__).parents[1].joinpath('app/content/projects.json').read_text(encoding='utf-8'))
+    assert len(rows) == len(source)
     assert rows[0]['slug'] == 'embedded-plate-recognition'
     assert client.get('/api/projects/' + rows[0]['slug']).json() == rows[0]
     assert len(client.get('/api/projects', params={'q':'Flask'}).json()) > 0
