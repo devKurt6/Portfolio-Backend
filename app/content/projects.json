@@ -161,5 +161,34 @@
       "Image processing",
       "SQLite database"
     ]
-  }
+  },
+{
+  "slug": "two-tech",
+  "title": "Two Tech — Backend & Database",
+  "description": "A serverless backend for managing products, orders, service bookings, project quotations, and administrator access.",
+  "longDescription": "Built with Netlify Functions and Neon PostgreSQL to support the Two Tech website and admin panel. The backend validates requests, authenticates administrators using hashed passwords and signed session cookies, and protects administrative endpoints. Orders use database prices and atomic stock updates to prevent price tampering and overselling. Additional features include editable service pricing, booking and quotation validation, request throttling, and signed Cloudinary image uploads.",
+  "image": "/images/two-tech.png",
+  "category": "Backend Development",
+  "tags": [
+    "JavaScript",
+    "Netlify Functions",
+    "Neon PostgreSQL",
+    "SQL",
+    "JWT",
+    "Zod",
+    "Cloudinary"
+  ],
+  "video": "",
+  "demo": "https://twotech.netlify.app/",
+  "github": "",
+  "featured": true,
+  "highlights": [
+    "Serverless APIs with validated requests",
+    "Admin authentication with HttpOnly session cookies",
+    "Server-calculated order totals and atomic stock updates",
+    "Product, inventory, and customer request management",
+    "Database-driven service pricing and booking validation",
+    "Signed image uploads, rate limiting, and CSRF protection"
+  ]
+}
 ]
