@@ -164,18 +164,18 @@
   },
 {
   "slug": "two-tech",
-  "title": "Two Tech — Backend & Database",
+  "title": "Two Tech — IT Services & Computer Parts",
   "description": "A serverless backend for managing products, orders, service bookings, project quotations, and administrator access.",
-  "longDescription": "Built with Netlify Functions and Neon PostgreSQL to support the Two Tech website and admin panel. The backend validates requests, authenticates administrators using hashed passwords and signed session cookies, and protects administrative endpoints. Orders use database prices and atomic stock updates to prevent price tampering and overselling. Additional features include editable service pricing, booking and quotation validation, request throttling, and signed Cloudinary image uploads.",
+  "longDescription": "A responsive website and admin panel for a Philippine IT business, featuring computer parts shopping, repair bookings, and custom project quotation requests.",
+  "longDescription": "Built for Two Tech, an IT business in Santo Tomas, Batangas offering computer parts, repairs, software development, automation, and embedded systems projects. Customers can browse products, place orders, request service schedules, and submit project inquiries. The protected admin panel manages inventory, service prices, business settings, policies, and customer requests. Neon PostgreSQL stores records, Netlify Functions handles authenticated APIs, Cloudinary hosts product images, and Netlify Forms receives notification copies.",
   "image": "/images/two-tech.png",
-  "category": "Backend Development",
+  "category": "Web Development",
   "tags": [
-    "JavaScript",
-    "Netlify Functions",
+    "React 18",
+    "Vite",
+    "Tailwind CSS",
     "Neon PostgreSQL",
-    "SQL",
-    "JWT",
-    "Zod",
+    "Netlify Functions",
     "Cloudinary"
   ],
   "video": "",
@@ -183,12 +183,12 @@
   "github": "",
   "featured": true,
   "highlights": [
-    "Serverless APIs with validated requests",
-    "Admin authentication with HttpOnly session cookies",
-    "Server-calculated order totals and atomic stock updates",
-    "Product, inventory, and customer request management",
-    "Database-driven service pricing and booking validation",
-    "Signed image uploads, rate limiting, and CSRF protection"
+    "Product catalog, persistent cart, and checkout",
+    "Repair booking and project quotation forms",
+    "Protected admin panel with inventory management",
+    "Editable service prices and business content",
+    "Server-validated pricing and atomic stock updates",
+    "Netlify Forms integration for email notifications"
   ]
 }
 ]
